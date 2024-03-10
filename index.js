@@ -10,6 +10,7 @@ const users = [
 ];
 
 app.use(cors());
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("User Management server in running");
@@ -21,7 +22,7 @@ app.get("/users", (req, res) => {
 
 app.post("/users", (req, res) => {
   console.log(req.body);
-  console.log('Post API hitting')
+  console.log("Post API hitting");
 });
 
 app.listen(port, () => {
